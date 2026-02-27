@@ -1,0 +1,13 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="32" fill="#0B1323"/>
+  <circle cx="960" cy="140" r="190" fill="#2DD4BF" fill-opacity="0.22"/>
+  <rect x="130" y="120" width="940" height="460" rx="26" fill="#111C33" stroke="#1F3258"/>
+  <rect x="170" y="170" width="860" height="58" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <rect x="200" y="192" width="120" height="14" rx="7" fill="#67E8F9" fill-opacity="0.7"/>
+  <rect x="770" y="184" width="90" height="30" rx="15" fill="#22D3EE" fill-opacity="0.22" stroke="#67E8F9"/>
+  <rect x="880" y="184" width="120" height="30" rx="15" fill="#0EA5E9" fill-opacity="0.22" stroke="#67E8F9"/>
+  <rect x="170" y="258" width="260" height="280" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <rect x="450" y="258" width="260" height="280" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <rect x="730" y="258" width="300" height="280" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <text x="170" y="610" fill="#E2E8F0" font-size="44" font-family="Arial" font-weight="700">Smart E-Commerce Platform</text>
+</svg>

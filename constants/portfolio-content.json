@@ -1,0 +1,145 @@
+{
+  "personal": {
+    "name": "Aakash Bhat",
+    "title": "Computer Engineering Student | ML & Full-Stack Developer",
+    "heroTagline": "Building Scalable Systems & Intelligent Applications",
+    "phone": "+91-9312684774",
+    "email": "aakashbhat6476@gmail.com",
+    "location": "Faridabad, Haryana, India",
+    "statement": [
+      "I design and ship robust web applications with a focus on performance, clean architecture, and maintainable code.",
+      "My current focus combines machine learning workflows with full-stack engineering to build practical, high-impact products."
+    ],
+    "social": {
+      "github": "https://github.com/AakashBhat1",
+      "linkedin": "https://linkedin.com/in/aakash-bhat-42888226a/"
+    },
+    "resumePath": "/Aakash-Bhat-Resume.pdf"
+  },
+  "about": {
+    "summary": "I am a B.Tech Computer Engineering student passionate about blending machine learning with modern full-stack development. I enjoy building systems that are visually polished, technically reliable, and ready for production deployment.",
+    "interests": [
+      "Machine Learning & Applied AI",
+      "Scalable Full-Stack Architecture",
+      "Human-Centered Product Engineering",
+      "Performance Optimization"
+    ],
+    "highlights": [
+      "ML model development",
+      "Next.js engineering",
+      "Production-ready interfaces",
+      "API-first backend workflows"
+    ]
+  },
+  "skills": {
+    "Languages": [
+      { "name": "Python", "level": 92 },
+      { "name": "JavaScript", "level": 88 },
+      { "name": "HTML5", "level": 90 },
+      { "name": "CSS3", "level": 89 }
+    ],
+    "Frameworks": [
+      { "name": "React.js", "level": 89 },
+      { "name": "Next.js", "level": 87 },
+      { "name": "Tailwind CSS", "level": 90 },
+      { "name": "Flask", "level": 82 },
+      { "name": "OpenCV", "level": 80 }
+    ],
+    "Databases": [
+      { "name": "MongoDB (basic)", "level": 72 },
+      { "name": "Firebase", "level": 80 }
+    ],
+    "Tools": [
+      { "name": "Git", "level": 86 },
+      { "name": "GitHub", "level": 88 },
+      { "name": "VS Code", "level": 91 },
+      { "name": "Netlify", "level": 82 }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Data Science Trainee",
+      "company": "Codec Technologies Pvt. Ltd.",
+      "period": "Sep 26, 2025 - Dec 26, 2025",
+      "details": [
+        "AICTE & ICAC approved internship",
+        "Data preprocessing and model development using Python",
+        "Applied machine learning to real-world datasets"
+      ]
+    },
+    {
+      "role": "MERN Stack Developer Trainee",
+      "company": "Codec Technologies Pvt. Ltd.",
+      "period": "Nov 07, 2025 - Dec 08, 2025",
+      "details": [
+        "Built web components using MongoDB, Express.js, React, Node.js",
+        "Implemented RESTful APIs",
+        "Component-based UI development"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Akruit Digital Solutions Website",
+      "period": "May 2025 - Jun 2025",
+      "description": "Production-ready responsive IT consulting website with interactive visuals and conversion-focused sections.",
+      "stack": ["Tailwind CSS", "JavaScript", "Three.js", "tsParticles", "Firebase"],
+      "github": "#",
+      "image": "/projects/akruit.svg"
+    },
+    {
+      "title": "Real-Time Sign Language Recognition",
+      "period": "Sep 2024 - Nov 2024",
+      "description": "Machine-learning powered gesture recognition system with real-time inference for practical accessibility use cases.",
+      "stack": ["Python", "Machine Learning", "OpenCV", "Pickle", "JSON"],
+      "github": "#",
+      "image": "/projects/sign-language.svg"
+    },
+    {
+      "title": "Smart E-Commerce Platform",
+      "period": "Feb 2024 - May 2024",
+      "description": "E-commerce experience built with Next.js and TypeScript, optimized using static generation and streamlined checkout.",
+      "stack": ["Next.js", "TypeScript", "SCSS", "Snipcart", "SSG"],
+      "github": "#",
+      "image": "/projects/ecommerce.svg"
+    },
+    {
+      "title": "Smart Parking System",
+      "period": "Aug 2023 - Dec 2023",
+      "description": "Computer vision solution for automated license plate detection, OCR processing, and a live monitoring dashboard.",
+      "stack": ["OpenCV", "OCR", "Flask", "Python", "Dashboard"],
+      "github": "#",
+      "image": "/projects/parking.svg"
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech - Computer Engineering",
+      "institution": "J.C. Bose University of Science & Technology, YMCA, Faridabad",
+      "period": "2022 - 2026"
+    },
+    {
+      "title": "Class XII",
+      "institution": "Delhi Public School, Faridabad",
+      "period": "2022"
+    },
+    {
+      "title": "Class X",
+      "institution": "Delhi Public School, Faridabad",
+      "period": "2020"
+    }
+  ],
+  "coursework": [
+    "Data Structures & Algorithms",
+    "Database Management Systems",
+    "Operating Systems",
+    "Computer Networks",
+    "Machine Learning"
+  ],
+  "certification": {
+    "title": "Advanced R Programming for Data Analytics in Business",
+    "issuer": "NPTEL (IIT Kanpur)",
+    "period": "Jul-Oct 2025",
+    "description": "Focused training in advanced R workflows for analytics, statistical modeling, and business data interpretation."
+  }
+}

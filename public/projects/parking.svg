@@ -1,0 +1,13 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" rx="32" fill="#0A1222"/>
+  <circle cx="230" cy="520" r="210" fill="#0EA5E9" fill-opacity="0.2"/>
+  <rect x="130" y="120" width="940" height="460" rx="26" fill="#111C33" stroke="#1F3258"/>
+  <rect x="180" y="180" width="460" height="320" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <rect x="220" y="220" width="220" height="160" rx="14" fill="#1D3B62"/>
+  <rect x="470" y="220" width="130" height="18" rx="9" fill="#67E8F9" fill-opacity="0.8"/>
+  <rect x="470" y="252" width="110" height="14" rx="7" fill="#93C5FD" fill-opacity="0.55"/>
+  <rect x="470" y="280" width="120" height="14" rx="7" fill="#93C5FD" fill-opacity="0.4"/>
+  <rect x="680" y="180" width="340" height="150" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <rect x="680" y="350" width="340" height="150" rx="18" fill="#0F1A30" stroke="#274272"/>
+  <text x="180" y="610" fill="#E2E8F0" font-size="44" font-family="Arial" font-weight="700">Smart Parking System</text>
+</svg>

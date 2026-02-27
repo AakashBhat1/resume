@@ -1,0 +1,31 @@
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(16px) translateY(-14px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0) translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.floating-orb {
+  animation: orbit 18s ease-in-out infinite;
+}
+
+.floating-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
