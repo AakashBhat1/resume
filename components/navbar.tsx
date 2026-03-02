@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import { navItems } from "@/constants/site";
+import { navItems, portfolioData } from "@/constants/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Navbar() {
@@ -81,6 +81,13 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <a
+            href={portfolioData.personal.resumePath}
+            download
+            className="hidden items-center justify-center rounded-lg bg-cyan-500/10 border border-cyan-400/30 px-3 py-1.5 text-xs font-semibold text-cyan-200 transition hover:bg-cyan-500/20 hover:border-cyan-300/60 md:inline-flex"
+          >
+            Resume
+          </a>
           <ThemeToggle />
           <button
             type="button"
@@ -115,6 +122,15 @@ export function Navbar() {
                   </button>
                 </li>
               ))}
+              <li>
+                <a
+                  href={portfolioData.personal.resumePath}
+                  download
+                  className="mt-2 flex w-full items-center justify-center rounded-lg bg-cyan-500/10 border border-cyan-400/30 px-3 py-2.5 text-sm font-semibold text-cyan-200 transition hover:bg-cyan-500/20 hover:border-cyan-300/60"
+                >
+                  Download Resume
+                </a>
+              </li>
             </ul>
           </motion.div>
         ) : null}

@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { portfolioData } from "@/constants/site";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export function HeroSection() {
   const { scrollY } = useScroll();
@@ -27,9 +28,9 @@ export function HeroSection() {
             <h1 className="text-balance text-4xl font-black tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
               {portfolioData.personal.name}
             </h1>
-            <p className="mt-4 max-w-2xl text-xl font-semibold text-slate-200/95 sm:text-2xl">
-              {portfolioData.personal.heroTagline}
-            </p>
+            <div className="mt-4 max-w-2xl text-xl font-semibold text-slate-200/95 sm:text-2xl min-h-[64px] sm:min-h-[72px]">
+              <TypewriterEffect text={portfolioData.personal.heroTagline} delay={500} />
+            </div>
             <div className="mt-6 space-y-2 text-sm leading-relaxed text-slate-300 sm:text-base">
               {portfolioData.personal.statement.map((line) => (
                 <p key={line}>{line}</p>

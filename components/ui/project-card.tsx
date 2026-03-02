@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { FiArrowUpRight, FiGithub, FiExternalLink } from "react-icons/fi";
 import type { ProjectItem } from "@/lib/types";
 import { GlassCard } from "@/components/ui/glass-card";
 
@@ -51,6 +51,18 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         <div className="mt-6 flex items-center gap-3">
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-cyan-500/10 border border-cyan-400/30 px-3 py-2 text-sm font-medium text-cyan-50 transition hover:bg-cyan-500/20 hover:border-cyan-300/60"
+              aria-label={`Live demo for ${project.title}`}
+            >
+              <FiExternalLink className="size-4" />
+              Live Demo
+            </a>
+          )}
           <a
             href={project.github}
             target="_blank"

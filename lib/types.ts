@@ -16,6 +16,7 @@ export type ProjectItem = {
   description: string;
   stack: string[];
   github: string;
+  demo?: string;
   image: string;
 };
 

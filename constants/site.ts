@@ -3,7 +3,7 @@ import type { PortfolioContent } from "@/lib/types";
 
 export const portfolioData = portfolioContent as PortfolioContent;
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3001";
 
 export const siteConfig = {
   name: portfolioData.personal.name,

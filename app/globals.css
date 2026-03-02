@@ -25,6 +25,12 @@
   @apply border-border;
 }
 
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 html,
 body {
   width: 100%;

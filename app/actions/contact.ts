@@ -2,21 +2,7 @@
 
 import { sendContactMail } from "@/lib/mailer";
 import { contactSchema } from "@/lib/validations";
-
-export type ContactFormState = {
-  status: "idle" | "success" | "error";
-  message: string;
-  fieldErrors?: {
-    name?: string;
-    email?: string;
-    message?: string;
-  };
-};
-
-export const initialContactState: ContactFormState = {
-  status: "idle",
-  message: "",
-};
+import { ContactFormState } from "@/app/actions/contact-state";
 
 export async function submitContactForm(
   _previousState: ContactFormState,

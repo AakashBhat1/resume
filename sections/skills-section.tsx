@@ -3,6 +3,29 @@ import { AnimationWrapper } from "@/components/ui/animation-wrapper";
 import { GlassCard } from "@/components/ui/glass-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SkillBar } from "@/components/ui/skill-bar";
+import { 
+  SiPython, SiJavascript, SiHtml5, SiCss3, SiReact, SiNextdotjs, SiTailwindcss, 
+  SiFlask, SiOpencv, SiMongodb, SiFirebase, SiGit, SiGithub, SiNetlify 
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+
+const iconMap: Record<string, React.ElementType> = {
+  "Python": SiPython,
+  "JavaScript": SiJavascript,
+  "HTML5": SiHtml5,
+  "CSS3": SiCss3,
+  "React.js": SiReact,
+  "Next.js": SiNextdotjs,
+  "Tailwind CSS": SiTailwindcss,
+  "Flask": SiFlask,
+  "OpenCV": SiOpencv,
+  "MongoDB (basic)": SiMongodb,
+  "Firebase": SiFirebase,
+  "Git": SiGit,
+  "GitHub": SiGithub,
+  "VS Code": VscVscode,
+  "Netlify": SiNetlify
+};
 
 export function SkillsSection() {
   return (
@@ -19,14 +42,18 @@ export function SkillsSection() {
             <GlassCard className="h-full p-5 sm:p-6">
               <h3 className="mb-4 text-lg font-semibold text-slate-100">{category}</h3>
               <div className="space-y-4">
-                {items.map((item, itemIndex) => (
-                  <SkillBar
-                    key={item.name}
-                    name={item.name}
-                    level={item.level}
-                    delay={itemIndex * 0.07}
-                  />
-                ))}
+                {items.map((item, itemIndex) => {
+                  const Icon = iconMap[item.name as keyof typeof iconMap];
+                  return (
+                    <SkillBar
+                      key={item.name}
+                      name={item.name}
+                      level={item.level}
+                      delay={itemIndex * 0.07}
+                      icon={Icon ? <Icon /> : undefined}
+                    />
+                  );
+                })}
               </div>
             </GlassCard>
           </AnimationWrapper>
