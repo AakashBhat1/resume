@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Aakash Bhat | Portfolio & Resume
+
+**Live site:** [https://resume-beta-coral.vercel.app](https://resume-beta-coral.vercel.app/)
+
+This repository contains my personal portfolio and resume site, built with Next.js and deployed on Vercel. Visitors can use the live link above to view my resume, projects, and contact details.
 
 ## Getting Started
 
