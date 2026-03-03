@@ -80,6 +80,14 @@
   ],
   "projects": [
     {
+      "title": "Standalone Monocular Distance Estimator",
+      "period": "Jan 2026",
+      "description": "Self-contained Python module that converts MiDaS monocular depth estimates into calibrated real-world distance for a selected bounding box.",
+      "stack": ["Python", "PyTorch", "OpenCV", "MiDaS", "Computer Vision"],
+      "github": "https://github.com/AakashBhat1/distance_estimator",
+      "image": "/projects/sign-language.svg"
+    },
+    {
       "title": "Akruit Digital Solutions Website",
       "period": "May 2025 - Jun 2025",
       "description": "Production-ready responsive IT consulting website with interactive visuals and conversion-focused sections.",
