@@ -92,7 +92,7 @@
       "period": "May 2025 - Jun 2025",
       "description": "Production-ready responsive IT consulting website with interactive visuals and conversion-focused sections.",
       "stack": ["Tailwind CSS", "JavaScript", "Three.js", "tsParticles", "Firebase"],
-      "github": "#",
+      "github": "https://incredible-rolypoly-bb04aa.netlify.app/",
       "image": "/projects/akruit.svg"
     },
     {
@@ -100,7 +100,7 @@
       "period": "Sep 2024 - Nov 2024",
       "description": "Machine-learning powered gesture recognition system with real-time inference for practical accessibility use cases.",
       "stack": ["Python", "Machine Learning", "OpenCV", "Pickle", "JSON"],
-      "github": "#",
+      "github": "https://github.com/AakashBhat1/real-time-sign-language-recognition",
       "image": "/projects/sign-language.svg"
     },
     {
@@ -108,7 +108,7 @@
       "period": "Feb 2024 - May 2024",
       "description": "E-commerce experience built with Next.js and TypeScript, optimized using static generation and streamlined checkout.",
       "stack": ["Next.js", "TypeScript", "SCSS", "Snipcart", "SSG"],
-      "github": "#",
+      "github": "https://github.com/AakashBhat1/smart-ecommerce-nextjs",
       "image": "/projects/ecommerce.svg"
     },
     {
@@ -116,7 +116,7 @@
       "period": "Aug 2023 - Dec 2023",
       "description": "Computer vision solution for automated license plate detection, OCR processing, and a live monitoring dashboard.",
       "stack": ["OpenCV", "OCR", "Flask", "Python", "Dashboard"],
-      "github": "#",
+      "github": "https://github.com/AakashBhat1/smart-parking-system-",
       "image": "/projects/parking.svg"
     }
   ],
