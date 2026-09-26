@@ -53,8 +53,8 @@ export function ContactForm() {
 
   return (
     <form ref={formRef} action={formAction} className="space-y-8" noValidate>
-      {/* Honeypot: hidden from people, tempting to bots. */}
-      <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      {/* Honeypot: hidden from people, tempting to bots. Name is deliberately not one autofill recognises. */}
+      <input type="text" name="hp_field_x" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
 
       <div className="grid gap-8 sm:grid-cols-2">
         <Field name="name" label="Your name" autoComplete="name" error={state.fieldErrors?.name} />

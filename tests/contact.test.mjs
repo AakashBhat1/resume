@@ -106,7 +106,7 @@ test("oversized fields and honeypots do not send email or consume delivery quota
   const { submit } = createAction({ sendMail: async () => { sent += 1; } });
   assert.ok((await submit({}, form({ name: "n".repeat(81) }))).fieldErrors.name);
   assert.ok((await submit({}, form({ message: "m".repeat(2001) }))).fieldErrors.message);
-  assert.equal((await submit({}, form({ company: "spam" }))).status, "success");
+  assert.equal((await submit({}, form({ hp_field_x: "spam" }))).status, "success");
   assert.equal(sent, 0);
   for (let index = 0; index < 3; index += 1) {
     assert.equal((await submit({}, form({ name: "n".repeat(80), message: "m".repeat(2000) }))).status, "success");

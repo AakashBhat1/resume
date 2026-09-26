@@ -51,10 +51,12 @@ export function RevealText({
   const inView = useInView(ref, { once: true, amount: 0.4 });
   const words = text.split(" ");
 
+  // The sr-only copy is what assistive tech reads; aria-label is ignored on generic elements like <p>/<span>.
   if (immediate) {
     // Pure CSS path: plays on first paint, before hydration, so above-the-fold text is never stuck hidden.
     return (
-      <Tag className={className} aria-label={text}>
+      <Tag className={className}>
+        <span className="sr-only">{text}</span>
         {words.map((word, index) => (
           <span key={`${word}-${index}`} aria-hidden="true" className="inline-block overflow-hidden pb-[0.08em] align-bottom">
             <span className="word-rise" style={{ animationDelay: `${delay + index * stagger}s` }}>
@@ -68,7 +70,8 @@ export function RevealText({
   }
 
   return (
-    <Tag ref={ref} className={className} aria-label={text}>
+    <Tag ref={ref} className={className}>
+      <span className="sr-only">{text}</span>
       {words.map((word, index) => (
         <span
           key={`${word}-${index}`}

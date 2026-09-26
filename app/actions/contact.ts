@@ -10,7 +10,7 @@ export async function submitContactForm(
   _previousState: ContactFormState,
   formData: FormData,
 ): Promise<ContactFormState> {
-  const honeypot = String(formData.get("company") ?? "");
+  const honeypot = String(formData.get("hp_field_x") ?? "");
 
   if (honeypot) {
     return {

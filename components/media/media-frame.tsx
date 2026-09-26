@@ -33,6 +33,16 @@ function usePrefersReducedMotion(): boolean {
   return reduced;
 }
 
+interface NetworkInformationLike {
+  saveData?: boolean;
+}
+
+/** True when the visitor has asked the browser to save data (Data Saver / Lite mode). */
+function prefersSaveData(): boolean {
+  const connection = (navigator as Navigator & { connection?: NetworkInformationLike }).connection;
+  return connection?.saveData === true;
+}
+
 function LoopVideo({ media, alt }: Pick<MediaContentProps, "media" | "alt">) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = usePrefersReducedMotion();
@@ -42,7 +52,7 @@ function LoopVideo({ media, alt }: Pick<MediaContentProps, "media" | "alt">) {
     if (!video) {
       return;
     }
-    if (reduced) {
+    if (reduced || prefersSaveData()) {
       video.pause();
       return;
     }

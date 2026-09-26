@@ -71,6 +71,13 @@ body {
   opacity: 0.12;
 }
 
+/* A full-viewport blend layer is costly on low-end phones; the texture is barely visible there anyway. */
+@media (max-width: 767px) {
+  .grain::after {
+    display: none;
+  }
+}
+
 @layer components {
   .shell {
     @apply container;
