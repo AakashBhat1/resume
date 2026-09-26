@@ -9,7 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
+info_about_handover_to_other_ai_tools.md
 # testing
 /coverage
 
