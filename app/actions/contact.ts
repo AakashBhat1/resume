@@ -1,6 +1,8 @@
 "use server";
 
+import { headers } from "next/headers";
 import { sendContactMail } from "@/lib/mailer";
+import { allowContactSubmission } from "@/lib/rate-limit";
 import { contactSchema } from "@/lib/validations";
 import { ContactFormState } from "@/app/actions/contact-state";
 
@@ -40,6 +42,16 @@ export async function submitContactForm(
   }
 
   try {
+    const requestHeaders = await headers();
+    const ip = requestHeaders.get("x-forwarded-for")?.split(",")[0].trim() || "unknown";
+
+    if (!allowContactSubmission(ip)) {
+      return {
+        status: "error",
+        message: "You've sent several messages recently. Please try again in 10 minutes.",
+      };
+    }
+
     await sendContactMail({
       senderName: parsed.data.name,
       senderEmail: parsed.data.email,
@@ -51,12 +63,10 @@ export async function submitContactForm(
       message: "Thanks for reaching out. Your message has been sent.",
     };
   } catch (error) {
+    console.error("Failed to send contact message:", error);
     return {
       status: "error",
-      message:
-        error instanceof Error
-          ? error.message
-          : "Unable to send message right now. Please try again later.",
+      message: "Unable to send message right now. Please try again later.",
     };
   }
 }

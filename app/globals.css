@@ -1,71 +1,278 @@
-@import "../styles/animations.css";
+@import "lenis/dist/lenis.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --background: 248 250 252;
-  --foreground: 15 23 42;
-  --muted: 71 85 105;
-  --border: 148 163 184;
-  --card: 255 255 255;
+  color-scheme: light;
+  --background: 251 246 238; /* #FBF6EE warm cream */
+  --surface: 255 253 248;    /* #FFFDF8 paper */
+  --foreground: 43 30 22;    /* #2B1E16 bark ink */
+  --muted: 110 90 75;        /* #6E5A4B */
+  --border: 230 217 198;     /* #E6D9C6 */
+  --primary: 196 84 28;      /* #C4541C burnt pumpkin */
+  --primary-hover: 175 71 20;
+  --marigold: 227 163 58;    /* #E3A33A */
+  --cranberry: 142 47 54;    /* #8E2F36 */
+  --moss: 95 107 58;         /* #5F6B3A */
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .dark {
   color-scheme: dark;
-  --background: 15 23 42;
-  --foreground: 226 232 240;
-  --muted: 148 163 184;
-  --border: 71 85 105;
-  --card: 30 41 59;
+  --background: 26 20 17;    /* #1A1411 espresso */
+  --surface: 36 27 22;
+  --foreground: 243 232 218;
+  --muted: 184 164 147;
+  --border: 58 44 35;
+  --primary: 224 122 63;
+  --primary-hover: 240 138 79;
+  --marigold: 240 185 85;
+  --cranberry: 196 82 90;
+  --moss: 154 165 106;
 }
 
 * {
   @apply border-border;
 }
 
-@media (pointer: fine) {
-  * {
-    cursor: none !important;
-  }
-}
-
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+*:focus-visible {
+  outline: 2px solid rgb(var(--primary));
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 body {
-  @apply bg-background text-foreground antialiased transition-colors duration-300;
-  font-feature-settings: "rlig" 1, "calt" 1;
+  @apply bg-background font-sans text-foreground antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
 }
 
 ::selection {
-  @apply bg-cyan-400/40 text-slate-100;
+  background-color: rgb(var(--marigold) / 0.4);
+  color: rgb(var(--foreground));
+}
+
+/* Static paper grain over everything; pointer-events off so it never blocks input. */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.dark .grain::after {
+  mix-blend-mode: soft-light;
+  opacity: 0.12;
 }
 
 @layer components {
-  .glass-panel {
-    @apply rounded-2xl border border-white/10 bg-slate-900/55 backdrop-blur-xl shadow-glass dark:border-white/10;
+  .shell {
+    @apply container;
   }
 
-  .light .glass-panel,
-  :root:not(.dark) .glass-panel {
-    @apply border-slate-900/10 bg-white/70;
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.22em] text-muted;
   }
 
-  .section-shell {
-    @apply container py-16 md:py-20;
+  .display {
+    @apply font-serif font-medium tracking-[-0.02em];
+    font-variation-settings: "SOFT" 100, "WONK" 1;
   }
 
   .input-shell {
-    @apply w-full rounded-xl border border-slate-300/70 bg-white/75 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-300/40 dark:border-slate-600/70 dark:bg-slate-900/70 dark:text-slate-100 dark:focus:ring-cyan-500/35;
+    @apply w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground outline-none transition duration-200 placeholder:text-muted/60 focus:border-primary focus:ring-2 focus:ring-primary/20;
   }
 
-  .magnetic-button {
-    @apply transition-transform duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0;
+  /* Underline that draws in from the left on hover. */
+  .link-draw {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 450ms var(--ease-out-expo), color 200ms ease;
+  }
+
+  .link-draw:hover,
+  .link-draw:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+/* ---------- First-paint entrances (CSS, so they run before hydration) ---------- */
+@keyframes word-rise {
+  from {
+    transform: translate3d(0, 110%, 0) rotate(4deg);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+}
+
+@keyframes clip-up {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.word-rise {
+  display: inline-block;
+  animation: word-rise 1s var(--ease-out-expo) both;
+}
+
+.fade-up {
+  animation: fade-up 1s var(--ease-out-expo) both;
+}
+
+.clip-up {
+  animation: clip-up 1.4s var(--ease-out-expo) both;
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ---------- Falling leaves (hero fallback art) ---------- */
+@keyframes leaf-fall {
+  0% {
+    transform: translate3d(0, -20%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--leaf-drift, 40px), 620%, 0) rotate(var(--leaf-spin, 320deg));
+    opacity: 0;
+  }
+}
+
+.leaf {
+  animation: leaf-fall var(--leaf-duration, 14s) linear var(--leaf-delay, 0s) infinite;
+  will-change: transform;
+}
+
+@keyframes garland-sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+
+.garland {
+  transform-origin: 50% 0;
+  animation: garland-sway 7s var(--ease-in-out) infinite;
+}
+
+/* ---------- Route transitions (React <ViewTransition>) ---------- */
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: translate3d(0, -32px, 0) scale(0.985);
+    filter: blur(6px);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 56px, 0);
+  }
+}
+
+::view-transition-old(.page-exit) {
+  animation: page-out 420ms var(--ease-in-out) both;
+}
+
+::view-transition-new(.page-enter) {
+  animation: page-in 780ms var(--ease-out-expo) 260ms both;
+}
+
+/* Shared elements (project cover + title) morph between routes. */
+::view-transition-group(.morph) {
+  animation-duration: 760ms;
+  animation-timing-function: var(--ease-out-expo);
+}
+
+::view-transition-old(.morph),
+::view-transition-new(.morph) {
+  height: 100%;
+  object-fit: cover;
+  animation-duration: 760ms;
+}
+
+/* Nav stays perfectly still while pages swap beneath it. */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 50;
+}
+
+/* Theme toggle: circular reveal from the click point. */
+html.theme-vt::view-transition-old(root),
+html.theme-vt::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.theme-vt::view-transition-new(root) {
+  animation: theme-reveal 750ms var(--ease-out-expo);
+}
+
+@keyframes theme-reveal {
+  from {
+    clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 0%));
+  }
+  to {
+    clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 0%));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
+  .marquee-track,
+  .leaf,
+  .garland,
+  .word-rise,
+  .fade-up,
+  .clip-up {
+    animation: none !important;
+  }
+
+  .leaf {
+    display: none;
   }
 }

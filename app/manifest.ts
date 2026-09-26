@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Portfolio website for Aakash Bhat",
     start_url: "/",
     display: "standalone",
-    background_color: "#0f172a",
-    theme_color: "#0f172a",
+    background_color: "#FBF6EE",
+    theme_color: "#FBF6EE",
     icons: [
       {
         src: "/favicon.ico",

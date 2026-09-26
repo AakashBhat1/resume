@@ -13,29 +13,57 @@ export default function Image() {
     (
       <div
         style={{
-          background: "linear-gradient(to right, #0f172a, #020617)",
+          backgroundColor: "#FBF6EE",
           height: "100%",
           width: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "64px",
-          color: "#e2e8f0",
+          padding: "80px",
         }}
       >
         <div
           style={{
-            fontSize: 24,
+            fontSize: 20,
             textTransform: "uppercase",
-            letterSpacing: "0.18em",
-            color: "#67e8f9",
+            letterSpacing: "0.2em",
+            color: "#C4541C",
+            fontWeight: 700,
             marginBottom: "16px",
           }}
         >
           Portfolio
         </div>
-        <div style={{ fontSize: 72, fontWeight: 800, marginBottom: "12px" }}>{portfolioData.personal.name}</div>
-        <div style={{ fontSize: 34, maxWidth: "900px", color: "#cbd5e1" }}>{portfolioData.personal.title}</div>
+        <div
+          style={{
+            fontSize: 76,
+            fontWeight: 800,
+            color: "#2B1E16",
+            letterSpacing: "-0.02em",
+            marginBottom: "16px",
+          }}
+        >
+          {portfolioData.personal.name}
+        </div>
+        <div
+          style={{
+            height: "4px",
+            width: "100px",
+            backgroundColor: "#E3A33A",
+            marginBottom: "24px",
+            borderRadius: "2px",
+          }}
+        />
+        <div
+          style={{
+            fontSize: 32,
+            maxWidth: "960px",
+            color: "#6E5A4B",
+            lineHeight: 1.35,
+          }}
+        >
+          {portfolioData.personal.title}
+        </div>
       </div>
     ),
     {

@@ -6,6 +6,15 @@ type MailPayload = {
   message: string;
 };
 
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function getSmtpConfig() {
   const host = process.env.SMTP_HOST;
   const port = process.env.SMTP_PORT;
@@ -47,14 +56,14 @@ export async function sendContactMail(payload: MailPayload) {
     from: `Portfolio Contact <${config.auth.user}>`,
     to: config.to,
     replyTo: payload.senderEmail,
-    subject: `Portfolio Inquiry from ${payload.senderName}`,
+    subject: `Portfolio Inquiry from ${payload.senderName.replace(/[\r\n]/g, "")}`,
     text: `Name: ${payload.senderName}\nEmail: ${payload.senderEmail}\n\n${payload.message}`,
     html: `
       <h2>Portfolio Contact Request</h2>
-      <p><strong>Name:</strong> ${payload.senderName}</p>
-      <p><strong>Email:</strong> ${payload.senderEmail}</p>
+      <p><strong>Name:</strong> ${escapeHtml(payload.senderName)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(payload.senderEmail)}</p>
       <p><strong>Message:</strong></p>
-      <p>${payload.message.replace(/\n/g, "<br />")}</p>
+      <p>${escapeHtml(payload.message).replace(/\n/g, "<br />")}</p>
     `,
   });
 }

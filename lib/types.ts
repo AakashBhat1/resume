@@ -1,29 +1,35 @@
-export type SkillItem = {
-  name: string;
-  level: number;
-};
-
 export type ExperienceItem = {
   role: string;
   company: string;
   period: string;
+  location?: string;
   details: string[];
 };
 
 export type ProjectItem = {
+  slug: string;
   title: string;
+  featured?: boolean;
+  tagline?: string;
   period: string;
   description: string;
   stack: string[];
   github: string;
   demo?: string;
-  image: string;
+  image?: string;
 };
 
 export type EducationItem = {
   title: string;
   institution: string;
   period: string;
+};
+
+export type CertificationItem = {
+  title: string;
+  issuer: string;
+  period: string;
+  note?: string;
 };
 
 export type PortfolioContent = {
@@ -46,15 +52,9 @@ export type PortfolioContent = {
     interests: string[];
     highlights: string[];
   };
-  skills: Record<string, SkillItem[]>;
+  skills: Record<string, string[]>;
   experience: ExperienceItem[];
   projects: ProjectItem[];
   education: EducationItem[];
-  coursework: string[];
-  certification: {
-    title: string;
-    issuer: string;
-    period: string;
-    description: string;
-  };
+  certifications: CertificationItem[];
 };

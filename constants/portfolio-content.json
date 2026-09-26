@@ -1,153 +1,260 @@
 {
   "personal": {
     "name": "Aakash Bhat",
-    "title": "Computer Engineering Student | ML & Full-Stack Developer",
-    "heroTagline": "Building Scalable Systems & Intelligent Applications",
+    "title": "Software Engineer | DevOps & Automation",
+    "heroTagline": "Defence-tech computer vision, DevOps, and automation.",
     "phone": "+91-9312684774",
     "email": "aakashbhat6476@gmail.com",
     "location": "Faridabad, Haryana, India",
     "statement": [
-      "I design and ship robust web applications with a focus on performance, clean architecture, and maintainable code.",
-      "My current focus combines machine learning workflows with full-stack engineering to build practical, high-impact products."
+      "I work on defence technology projects across software engineering, DevOps, and technical consulting, focused on indigenisation and field deployment.",
+      "I build AI detection and surveillance systems by integrating computer vision models, backend APIs, dashboards, and containerized services."
     ],
     "social": {
       "github": "https://github.com/AakashBhat1",
-      "linkedin": "https://linkedin.com/in/aakash-bhat-42888226a/"
+      "linkedin": "https://www.linkedin.com/in/aakash-bhat-42888226a/"
     },
-    "resumePath": "/Aakash-Bhat-Resume.pdf"
+    "resumePath": "/Aakash_Bhat_Resume_2026.pdf"
   },
   "about": {
-    "summary": "I am a B.Tech Computer Engineering student passionate about blending machine learning with modern full-stack development. I enjoy building systems that are visually polished, technically reliable, and ready for production deployment.",
+    "summary": "I am a software engineer working on defence-tech computer vision systems, DevOps, and automation for field deployment.",
     "interests": [
-      "Machine Learning & Applied AI",
-      "Scalable Full-Stack Architecture",
-      "Human-Centered Product Engineering",
-      "Performance Optimization"
+      "DevOps",
+      "Automation",
+      "Computer Vision",
+      "Machine Learning"
     ],
     "highlights": [
-      "ML model development",
-      "Next.js engineering",
-      "Production-ready interfaces",
-      "API-first backend workflows"
+      "Computer vision models and detection systems",
+      "Backend APIs and dashboards",
+      "Containerized services",
+      "Technical evaluation and system integration"
     ]
   },
   "skills": {
     "Languages": [
-      { "name": "Python", "level": 92 },
-      { "name": "JavaScript", "level": 88 },
-      { "name": "HTML5", "level": 90 },
-      { "name": "CSS3", "level": 89 }
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "HTML5",
+      "CSS3"
     ],
-    "Frameworks": [
-      { "name": "React.js", "level": 89 },
-      { "name": "Next.js", "level": 87 },
-      { "name": "Tailwind CSS", "level": 90 },
-      { "name": "Flask", "level": 82 },
-      { "name": "OpenCV", "level": 80 }
+    "Backend and Web": [
+      "FastAPI",
+      "Flask",
+      "Next.js",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "WebSockets"
     ],
-    "Databases": [
-      { "name": "MongoDB (basic)", "level": 72 },
-      { "name": "Firebase", "level": 80 }
+    "AI and Machine Learning": [
+      "PyTorch",
+      "OpenVINO",
+      "OpenCV",
+      "YOLO",
+      "LightGBM",
+      "scikit-learn",
+      "FAISS",
+      "TensorFlow"
     ],
-    "Tools": [
-      { "name": "Git", "level": 86 },
-      { "name": "GitHub", "level": 88 },
-      { "name": "VS Code", "level": 91 },
-      { "name": "Netlify", "level": 82 }
+    "Data and Infrastructure": [
+      "PostgreSQL",
+      "SQLite",
+      "MongoDB",
+      "SQLAlchemy",
+      "Docker",
+      "Docker Compose",
+      "Nginx",
+      "MediaMTX",
+      "AWS (EC2)"
+    ],
+    "Automation and Testing": [
+      "Playwright",
+      "PyPDF",
+      "pytest",
+      "Jest",
+      "GitHub Actions",
+      "Postman"
+    ],
+    "Core Concepts": [
+      "Data Structures & Algorithms",
+      "DBMS",
+      "Operating Systems",
+      "Computer Networks",
+      "Machine Learning",
+      "Computer Vision"
     ]
   },
   "experience": [
     {
-      "role": "Data Science Trainee",
-      "company": "Codec Technologies Pvt. Ltd.",
-      "period": "Sep 26, 2025 - Dec 26, 2025",
+      "role": "Software Engineer, DevOps Engineer & Technical Consultant",
+      "company": "Earnest Tactical Solution Private Limited (ETSPL)",
+      "period": "Jul 2026 – Present",
+      "location": "India",
       "details": [
-        "AICTE & ICAC approved internship",
-        "Data preprocessing and model development using Python",
-        "Applied machine learning to real-world datasets"
+        "Work across software engineering, DevOps, and technical consulting for defence technology projects focused on technology indigenisation and field deployment.",
+        "Develop AI-based detection and surveillance systems by integrating computer vision models, backend APIs, dashboards, and containerized services.",
+        "Support technical evaluation, system integration, and solution documentation for UAVs, power electronics, and other defence applications."
       ]
     },
     {
-      "role": "MERN Stack Developer Trainee",
-      "company": "Codec Technologies Pvt. Ltd.",
-      "period": "Nov 07, 2025 - Dec 08, 2025",
+      "role": "AI/Computer Vision Intern",
+      "company": "Genic Minds",
+      "period": "Feb 2026 – Jun 2026",
+      "location": "Noida, India",
       "details": [
-        "Built web components using MongoDB, Express.js, React, Node.js",
-        "Implemented RESTful APIs",
-        "Component-based UI development"
+        "Developed facial recognition pipelines using deep learning, image embeddings, and OpenCV.",
+        "Built livestock identity models and worked across dataset preparation, annotation, CNN training, and edge-device inference optimization."
+      ]
+    },
+    {
+      "role": "Data Science and MERN Stack Developer Trainee",
+      "company": "Codec Technologies Pvt. Ltd.",
+      "period": "Dec 2025 – Feb 2026",
+      "location": "Remote",
+      "details": [
+        "Completed AICTE & ICAC approved training in data science and full-stack development, covering preprocessing, model development, REST APIs, and component-based interfaces.",
+        "Built Python analytics workflows and MERN application components using MongoDB, Express.js, React, and Node.js."
       ]
     }
   ],
   "projects": [
     {
-      "title": "Standalone Monocular Distance Estimator",
-      "period": "Jan 2026",
-      "description": "Self-contained Python module that converts MiDaS monocular depth estimates into calibrated real-world distance for a selected bounding box.",
-      "stack": ["Python", "PyTorch", "OpenCV", "MiDaS", "Computer Vision"],
-      "github": "https://github.com/AakashBhat1/distance_estimator",
-      "image": "/projects/sign-language.svg"
+      "slug": "argus",
+      "title": "Argus",
+      "tagline": "Multi-Camera Intrusion Detection",
+      "period": "2026",
+      "description": "Built a self-hosted surveillance platform that batches YOLO/OpenVINO inference across multiple camera streams and tracks people inside configurable regions of interest. Implemented contextual risk scoring, authenticated WebSocket alerts, WebRTC playback through MediaMTX, and tenant-aware APIs, then containerized the stack with Docker Compose and deployed it on AWS EC2 behind an Nginx reverse proxy.",
+      "stack": [
+        "FastAPI",
+        "Next.js",
+        "OpenVINO",
+        "PostgreSQL",
+        "Docker",
+        "AWS EC2"
+      ],
+      "github": "https://github.com/AakashBhat1/argus",
+      "featured": true
     },
     {
-      "title": "Akruit Digital Solutions Website",
-      "period": "May 2025 - Jun 2025",
-      "description": "Production-ready responsive IT consulting website with interactive visuals and conversion-focused sections.",
-      "stack": ["Tailwind CSS", "JavaScript", "Three.js", "tsParticles", "Firebase"],
-      "github": "https://incredible-rolypoly-bb04aa.netlify.app/",
-      "image": "/projects/akruit.svg"
+      "slug": "gemsentry",
+      "title": "GeMSentry",
+      "tagline": "Government Tender Intelligence",
+      "period": "2026",
+      "description": "Automated GeM tender discovery with configurable keyword searches, date filtering, PDF downloads, and extraction of EMD, exemption, pre-bid, and ePBG details. Built a Flask and SQLite review dashboard with bid scoring, status workflows, cached document access, authenticated APIs, pytest coverage, and Google Sheets synchronization.",
+      "stack": [
+        "Python",
+        "Playwright",
+        "Flask",
+        "SQLite",
+        "PyPDF"
+      ],
+      "github": "https://github.com/AakashBhat1/GeMSentry",
+      "featured": true
     },
     {
-      "title": "Real-Time Sign Language Recognition",
-      "period": "Sep 2024 - Nov 2024",
-      "description": "Machine-learning powered gesture recognition system with real-time inference for practical accessibility use cases.",
-      "stack": ["Python", "Machine Learning", "OpenCV", "Pickle", "JSON"],
-      "github": "https://github.com/AakashBhat1/real-time-sign-language-recognition",
-      "image": "/projects/sign-language.svg"
+      "slug": "panox-v2",
+      "title": "Panox V2",
+      "tagline": "Dual-Fisheye 360 Video Stitcher",
+      "period": "2026",
+      "description": "Engineered a dual-fisheye-to-equirectangular video pipeline with ORB/RANSAC alignment, adaptive seams, multi-band blending, batch export, and spherical metadata injection. Added hardware detection, optional CUDA/NVENC acceleration, automatic CPU fallback, configuration presets, and CI tests across Python 3.10 and 3.12.",
+      "stack": [
+        "Python",
+        "OpenCV",
+        "CUDA",
+        "PyTorch",
+        "GitHub Actions"
+      ],
+      "github": "https://github.com/AakashBhat1/panox-v2-360-video-stitcher",
+      "featured": true
     },
     {
-      "title": "Smart E-Commerce Platform",
-      "period": "Feb 2024 - May 2024",
-      "description": "E-commerce experience built with Next.js and TypeScript, optimized using static generation and streamlined checkout.",
-      "stack": ["Next.js", "TypeScript", "SCSS", "Snipcart", "SSG"],
-      "github": "https://github.com/AakashBhat1/smart-ecommerce-nextjs",
-      "image": "/projects/ecommerce.svg"
+      "slug": "phishguard",
+      "title": "PhishGuard 2.0 Model Trainer",
+      "period": "2026",
+      "description": "Developed a phishing-URL training pipeline that harmonizes more than 1.2 million labeled records and extracts 30 lexical and domain-specific security features. Combined LightGBM, a PyTorch residual network, and character n-gram TF-IDF models through calibrated mixture-of-experts scoring with CPU fallback and FP16 GPU support.",
+      "stack": [
+        "PyTorch",
+        "LightGBM",
+        "scikit-learn",
+        "GPU training"
+      ],
+      "github": "https://github.com/AakashBhat1/phishguard-model-trainer"
     },
     {
-      "title": "Smart Parking System",
-      "period": "Aug 2023 - Dec 2023",
-      "description": "Computer vision solution for automated license plate detection, OCR processing, and a live monitoring dashboard.",
-      "stack": ["OpenCV", "OCR", "Flask", "Python", "Dashboard"],
-      "github": "https://github.com/AakashBhat1/smart-parking-system-",
-      "image": "/projects/parking.svg"
+      "slug": "malware-analysis",
+      "title": "Multi-Modal Binary Malware Analysis",
+      "period": "2026",
+      "description": "Implemented opcode Transformer, control-flow graph GIN, and system-call BiLSTM encoders with contrastive alignment and attention-weighted fusion. Added two-stage static and dynamic triage, missing-modality gating, FAISS similarity search, experiment-backed metrics, and a Streamlit research dashboard.",
+      "stack": [
+        "PyTorch",
+        "PyTorch Geometric",
+        "FAISS",
+        "Streamlit"
+      ],
+      "github": "https://github.com/AakashBhat1/Multi-Model"
+    },
+    {
+      "slug": "pdfzen",
+      "title": "PDFZen",
+      "tagline": "Local Document Processing Suite",
+      "period": "2026",
+      "description": "Created a privacy-focused PDF application with in-browser merge, split, compression, organization, rotation, cropping, watermarking, and page-numbering tools. Implemented a local FastAPI conversion backend for PDF-to-Word, Excel, PowerPoint, image, and Markdown workflows using pdf2docx, pandas, PyMuPDF, and LibreOffice.",
+      "stack": [
+        "Vite",
+        "JavaScript",
+        "FastAPI",
+        "PyMuPDF",
+        "LibreOffice"
+      ],
+      "github": "https://github.com/AakashBhat1/PDFZen"
     }
   ],
   "education": [
     {
-      "title": "B.Tech - Computer Engineering",
+      "title": "B.Tech. in Computer Engineering",
       "institution": "J.C. Bose University of Science & Technology, YMCA, Faridabad",
-      "period": "2022 - 2026"
+      "period": "2022 – 2026"
     },
     {
-      "title": "Class XII",
+      "title": "CBSE (Class XII)",
       "institution": "Delhi Public School, Faridabad",
       "period": "2022"
     },
     {
-      "title": "Class X",
+      "title": "CBSE (Class X)",
       "institution": "Delhi Public School, Faridabad",
       "period": "2020"
     }
   ],
-  "coursework": [
-    "Data Structures & Algorithms",
-    "Database Management Systems",
-    "Operating Systems",
-    "Computer Networks",
-    "Machine Learning"
-  ],
-  "certification": {
-    "title": "Advanced R Programming for Data Analytics in Business",
-    "issuer": "NPTEL (IIT Kanpur)",
-    "period": "Jul-Oct 2025",
-    "description": "Focused training in advanced R workflows for analytics, statistical modeling, and business data interpretation."
-  }
+  "certifications": [
+    {
+      "title": "Regression Analysis: Simplify Complex Data Relationships",
+      "issuer": "Google",
+      "period": "Mar 2026"
+    },
+    {
+      "title": "The Power of Statistics",
+      "issuer": "Google",
+      "period": "Feb 2026"
+    },
+    {
+      "title": "Go Beyond the Numbers: Translate Data into Insights",
+      "issuer": "Google",
+      "period": "Feb 2026"
+    },
+    {
+      "title": "Foundations of Data Science",
+      "issuer": "Google",
+      "period": "Feb 2026"
+    },
+    {
+      "title": "Advanced R Programming for Data Analytics in Business",
+      "issuer": "NPTEL (IIT Kanpur) | SWAYAM, Govt. of India",
+      "period": "Jul–Oct 2025",
+      "note": "12-week Online Certification"
+    }
+  ]
 }
